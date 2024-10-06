@@ -338,6 +338,7 @@ void V_ME_50(){
 
 Int CheckN;
 char CheckX[10000];
+Int _2,_3,_1,_0;
 
 void V_ME_500(){//判断是否为质数
     int n;
@@ -346,6 +347,12 @@ void V_ME_500(){//判断是否为质数
     for(int i=1;i<=n;i++){
         scanf("%s",CheckX);
         trans_x(&CheckN,CheckX);
+        if(Equal(&CheckN,&_3)||Equal(&CheckN,&_2)){//特判
+            printf("Yes\n");continue;
+        }
+        if(Equal(&CheckN,&_1)||Equal(&CheckN,&_0)){
+            printf("No\n");continue;
+        }
         if(MillerRabin(&CheckN,10)) printf("Yes\n");
         else printf("No\n");
     }
@@ -376,6 +383,7 @@ int main(int argc,char *argv[]){//处理参数
             }
         }
     }
+    _1.w[0]=1,_2.w[0]=2,_3.w[0]=3;
     srand(_s==-1?time(0):_seed);
     if(IN!=NULL) freopen(IN,"r",stdin);
     if(OUT!=NULL) freopen(OUT,"w",stdout);
