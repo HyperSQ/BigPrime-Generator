@@ -44,7 +44,7 @@ void printInt(Int *A){//以二进制形式输出一个BigInt（测试用）
 
 void printInt_x(Int *A){//以16进制的形式输出一个BigInt
     for(int i=31;i>=0;i--){
-        printf(i==31?"0x%08x":"%08x",A->w[i]);
+        printf(i==31?"0x%08llx":"%08llx",A->w[i]);
     }
 }
 
