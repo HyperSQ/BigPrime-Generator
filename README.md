@@ -1,5 +1,7 @@
 # 使用方法
 
+## 建议使用 $O_{\varepsilon}$ 优化
+
 ### 质数判断
 
 ```C1.exe -c -i file.in -o file.out``` 执行素数判断，分别以```file.in```与```file.out```输入输出。
