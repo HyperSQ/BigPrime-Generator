@@ -252,8 +252,7 @@ int MillerRabin(Int *N,int test_time){//MR板子
     }
     for(int i=0;i<test_time;i++){
         for(int j=0;j<MAXN;j++) A_mr.w[i]=0;
-        int P=N->w[0]-2<K-1?N->w[0]-2:K-1;
-        A_mr.w[0]=Rnd(2,P);
+        A_mr.w[0]=Rnd(2,K-1);
         Mod_pow(&A_mr,&U_mr,N,&V_mr);
         if(Equal(&V_mr,&MontOne)) continue;
         int s=0;
